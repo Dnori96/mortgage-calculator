@@ -72,7 +72,7 @@ function calc() {
     const resultsActive = document.querySelector('.results-active').style.display = 'flex';
     
     if (repayType.checked === true) {
-        return repayCalc();
+        return repayCalc(amountInput.value, rateInput.value, termInput.value);
     } 
     else if (interestType.checked === true){
         return interCalc();
@@ -82,6 +82,22 @@ function calc() {
     }
 };
 
-function repayCalc(amount, rate, term) {}
+bigNum = document.querySelector('.big-num')
 
-function interCalc(amount, rate) {}
+function repayCalc(principal, rate, term) {
+    p = principal;
+    r = rate / 12;
+    n = term * 12;
+    console.log(p, r, n);
+
+    repayments = formatter.format(p * ((r * ((1 + r) ** n)) / (((1 + r) ** n) - 1)));
+    console.log(repayments);
+
+    bigNum.textContent = repayments;
+    console.log(bigNum);
+    
+    return repayments
+}
+function interCalc(principal, rate) {
+
+}
