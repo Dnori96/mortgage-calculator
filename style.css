@@ -131,7 +131,7 @@ body{
     font-weight: var(--font-700);
     cursor: default;
 }
-.input-amount-box{
+#input-amount-box{
     border: 0;
     width: 100%;
 }
@@ -149,25 +149,25 @@ body{
     border: 1.5px solid var(--Slate-300);
     border-radius: 4px;
 }
-.input-term{
+#input-term{
     border: 0;
     width: 120px;
 }
-.input-rate{
+#input-rate{
     border: 0;
     width: 157px;
 }
-.input-amount-box, 
-.input-term, 
-.input-rate{
+#input-amount-box, 
+#input-term, 
+#input-rate{
     padding-left: 8px;
     font-size: var(--font-def-size);
     font-weight: var(--font-700);
     transition: padding 0.2s ease;
 }
-.input-amount-box:focus, 
-.input-term:focus, 
-.input-rate:focus{
+#input-amount-box:focus, 
+#input-term:focus, 
+#input-rate:focus{
     padding-left: 12px;
     outline: none;
     font-size: var(--font-def-size);
@@ -302,10 +302,10 @@ button img{
 
 /* Changes in JS */
 .results-defult{
-    display: none;  /*WHEN USING CHANGE TO FLEX*/
+    display: flex;  /*WHEN USING CHANGE TO FLEX*/
 }
 .results-active{
-    display: flex;  /*WHEN USING CHANGE TO FLEX*/
+    display: none;  /*WHEN USING CHANGE TO FLEX*/
 }
 
 /* Active Completed Results */
