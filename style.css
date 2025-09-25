@@ -279,7 +279,7 @@ button img{
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.308);
 }
 /* Empty Not Active */
-.results-defult{
+.results-default{
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -301,7 +301,7 @@ button img{
 }
 
 /* Changes in JS */
-.results-defult{
+.results-default{
     display: flex;  /*WHEN USING CHANGE TO FLEX*/
 }
 .results-active{
