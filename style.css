@@ -117,10 +117,15 @@ body{
     font-weight: var(--font-500);
 }
 .error-msg{
-    visibility: hidden;
     margin-bottom: 12px;
     font-size: var(--font-def-small);
     color: var(--Red);
+}
+#amount-err-msg,
+#term-err-msg,
+#rate-err-msg,
+#type-err-msg{
+    visibility: hidden;
 }
 .icon-box{
     background: var(--Slate-100);
