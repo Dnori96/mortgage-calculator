@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Mortgage repayment calculator</title>
+</head>
+<body>
+  <div class="container">
+    <section class="calculator-section">
+      <form class="calculator-form">
+        <div class="top-calc-sec">
+          <h3 class="mortgage-title">Mortgage Calculator</h3>
+          <button type="reset">Clear All</button>
+        </div>
+        <div class="amount-input">
+          <h5 class="input-label">Mortgage Amount</h5>
+          <div class="input-div"><p id="dollar-icon" class="icon-box">$</p><input type="text" class="input-amount-box"></div>
+          <p class="error-msg" id="amount-err-msg">This field is required</p>
+        </div>
+        <div class="term-rate-box">
+          <div class="term-box">
+            <h5 class="input-label">Mortgage Term</h5>
+            <div class="term-rate-div" id="term"><input type="text" class="input-term"><p id="years-icon" class="icon-box">years</p></div>
+            <p class="error-msg" id="term-err-msg">This field is required</p>
+          </div>
+          <div class="rate-box">
+            <h5 class="input-label">Interest Rate</h5>
+            <div class="term-rate-div" id="rate"><input type="text" class="input-rate"><p id="rate-icon" class="icon-box">%</p></div>
+            <p class="error-msg" id="rate-err-msg">This field is required</p>
+          </div>
+        </div>
+        <div class="mortgage-type">
+          <h5 class="input-label">Mortgage Type</h5>
+          <label class="repayment-box"><input type="radio" class="type-btn" id="repayment-btn" name="type">Repayment</label>
+          <label class="interest-only-box"><input type="radio" class="type-btn" id="interest-only-btn" name="type">Interest Only</label>
+          <p class="error-msg" id="type-err-msg">This field is required</p>
+        </div>
+        <button type="button" id="calculate-btn"><img src="assets/images/icon-calculator.svg">Calculate Repayments</button>
+      </form>
+    </section>
+    <section class="results-section">
+      <div class="results-defult">
+        <img src="assets/images/illustration-empty.svg">
+        <h3 class="result-title-empty">Results shown here</h3>
+        <p class="result-text-empty">Complete the form and click "calculate repayments" to see what your monthly repayments would be.</p>
+      </div>
+      <div class="results-active">
+        <h3 class="results-title-active">Your results</h3>
+        <p class="result-text-active">Your results are shown below based on the information you provided. To adjust the results, edit the form and click “calculate repayments” again.</p>
+        <div class="result-num">
+          <div class="big-box">
+            <h5 class="big-num-label">Your monthly repayments</h5>
+            <span class="big-num">123123</span>
+          </div>
+          <span class="divider"></span>
+          <div class="small-box">
+            <h5 class="small-num-label">Total you'll repay over the term</h5>
+            <span class="small-num">123123</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+      Coded by <a href="https://github.com/Dnori96">Diego Noriega</a>.
+    </div>
+  </footer>
+</body>
+</html>
