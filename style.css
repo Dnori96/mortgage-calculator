@@ -267,18 +267,24 @@ button img{
     height: 24px;
     width: 24px;
 }
+
+    /*Results Section*/
 .results-section{
     background: var(--Slate-900);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
     height: 100%;
     width: 50%;
     padding: 40px;
     border-radius: 0 0 0 80px;
     line-height: 24px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.308);
+}
+/* Empty Not Active */
+.results-defult{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    height: 100%;
 }
 .result-title-empty{
     color: var(--White);
@@ -294,8 +300,67 @@ button img{
     width: 192px;
 }
 
+/* Changes in JS */
+.results-defult{
+    display: none;  /*WHEN USING CHANGE TO FLEX*/
+}
 .results-active{
-    display: none;
+    display: flex;  /*WHEN USING CHANGE TO FLEX*/
+}
+
+/* Active Completed Results */
+.results-active{
+    flex-direction: column;
+}
+.results-title-active{
+    color: var(--White);
+    font-size: 24px;
+    margin-bottom: 16px;
+    font-weight: var(--font-700);
+}
+.result-text-active{
+    color: var(--Slate-300);
+    font-size: var(--font-def-size);
+    margin-bottom: 40px;
+    font-weight: var(--font-500);
+}
+.result-num{
+    display: flex;
+    flex-direction: column;
+    height: 292px;
+    width: 424px;
+    padding: 32px;
+    border-radius: 8px;
+    border-top: 4px solid var(--Lime);
+    background: rgba(0, 0, 0, 0.25);
+}
+.big-num-label{
+    color: var(--Slate-300);
+    font-size: var(--font-def-size);
+    font-weight: var(--font-500);
+    margin-bottom: 16px;
+}
+.big-num{
+    color: var(--Lime);
+    font-size: 56px;
+    font-weight: var(--font-700);
+}
+.divider{
+    height: 1px;
+    width: 100%;
+    background: rgba(154, 190, 213, 0.25);
+    margin: 32px 0;
+}
+.small-num-label{
+    color: var(--Slate-300);
+    font-size: var(--font-def-size);
+    font-weight: var(--font-500);
+    margin-bottom: 8px;
+}
+.small-num{
+    color: var(--White);
+    font-size: 24px;
+    font-weight: var(--font-700);
 }
 
     /* Footer */
