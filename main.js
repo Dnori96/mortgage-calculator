@@ -100,20 +100,20 @@ function repayCalc(principal, rate, term) {
     smallNumTitle.textContent = "Total you'll repay over the term";
     smallNum.style.display = "flex";
     
-    return repayments && totalAmount
+    return repayments && totalAmount;
 };
 function interCalc(principal, rate) {
     p = principal;
     r = (rate / 100) / 12;
 
-    interestOnly = p * r
+    interestOnly = p * r;
         bigNum.textContent = formatter.format(interestOnly);
     
-    document.querySelector('.result-num').style.height = "auto"
+    document.querySelector('.result-num').style.height = "auto";
     smallNumTitle.textContent = "Same amount after paying total interest";
     smallNum.style.display = "none";
 
-    return interestOnly
+    return interestOnly;
 };
 
 const termBox = document.querySelector(".term-box");
@@ -122,14 +122,15 @@ const rateBox = document.querySelector(".rate-box");
 const rateDiv = document.querySelector("#input-rate");
 
 interestType.addEventListener('change', e => {
-    termBox.style.display = "none";
-    rateDiv.style.width = "400px";
+    termBox.style.opacity = "0";
+    rateDiv.style.width = "375px";
     rateDiv.style.transition = "width 0.2s ease";
     termInput.style.textContent = "";
 });
 
 repayType.addEventListener('change', e => {
-    termBox.style.display = "";
+    termBox.style.opacity = "1";
+    termBox.style.transition = "opacity 0.2s ease-out"
     rateDiv.style.width = "137px";
 });
 
@@ -138,4 +139,4 @@ clearButton = document.getElementById("clear-btn");
 clearButton.addEventListener('click', e => {
     document.querySelector('.results-default').style.display = "flex";
     document.querySelector('.results-active').style.display = "none";
-})
+});

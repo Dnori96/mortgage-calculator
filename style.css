@@ -144,6 +144,7 @@ body{
 .term-rate-box{
     gap: 24px;
     justify-content: space-between;
+    position: relative;
 }
 .term-rate-div{
     width: 100%;
@@ -153,8 +154,12 @@ body{
 }
 /* FOR CHECKED BOXES */
 /* .term-box{
-    display: none;
+    visibility: hidden;
 } */
+.rate-box{
+    position: absolute;
+    right: 0;
+}
 #input-rate{
     width: 137px; /* Normal = 137px, Active = 400 */
 }
@@ -380,7 +385,8 @@ button img{
 .attribution {
     position: absolute;
     bottom: 0;
-    left: 43%; 
+    left: 0;
+    width: 100%; 
     font-size: 11px;
     margin-bottom: 3px;
     text-align: center;
