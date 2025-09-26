@@ -58,13 +58,9 @@ function validFunc() {
     if (repayType.checked !== true && interestType.checked !== true) { // For repayments
         typeError.style.visibility = "visible";
         isValid = false;
-    } else {
+    } else if (repayType.checked !== true && interestType.checked === true) { // For interest only
         typeError.style.visibility = "hidden";
-    };
-
-    if (repayType.checked !== true && interestType.checked === true) { // For interest only
-        typeError.style.visibility = "visible";
-        isValid = false;
+        isValid = true;
     } else {
         typeError.style.visibility = "hidden";
     };
@@ -72,11 +68,12 @@ function validFunc() {
     if (isValid === true) {
         return isValid && calc();
     };
+    
 };
 
 function calc() {
-    const resultsDefault = document.querySelector('.results-default').style.display = 'none';
-    const resultsActive = document.querySelector('.results-active').style.display = 'flex';
+    document.querySelector('.results-default').style.display = 'none';
+    document.querySelector('.results-active').style.display = 'flex';
     
     if (repayType.checked === true) {
         return repayCalc(amountInput.value, rateInput.value, termInput.value);
@@ -86,7 +83,7 @@ function calc() {
 };
 
 bigNum = document.querySelector('.big-num');
-smallNumTitle = document.querySelector('.small-num-label')
+smallNumTitle = document.querySelector('.small-num-label');
 smallNum = document.querySelector('.small-num');
 
 function repayCalc(principal, rate, term) {
@@ -99,6 +96,10 @@ function repayCalc(principal, rate, term) {
     totalAmount = repayments * n;
         smallNum.textContent = formatter.format(totalAmount);
     
+    document.querySelector('.result-num').style.height = "292px";
+    smallNumTitle.textContent = "Total you'll repay over the term";
+    smallNum.style.display = "flex";
+    
     return repayments && totalAmount
 };
 function interCalc(principal, rate) {
@@ -107,8 +108,12 @@ function interCalc(principal, rate) {
 
     interestOnly = p * r
         bigNum.textContent = formatter.format(interestOnly);
-        
-        smallNum.textContent = "N/A"
+    
+    document.querySelector('.result-num').style.height = "auto"
+    smallNumTitle.textContent = "Same amount after paying total interest";
+    smallNum.style.display = "none";
+
+    return interestOnly
 };
 
 const termBox = document.querySelector(".term-box");
@@ -120,9 +125,17 @@ interestType.addEventListener('change', e => {
     termBox.style.display = "none";
     rateDiv.style.width = "400px";
     rateDiv.style.transition = "width 0.2s ease";
+    termInput.style.textContent = "";
 });
 
 repayType.addEventListener('change', e => {
     termBox.style.display = "";
     rateDiv.style.width = "137px";
 });
+
+clearButton = document.getElementById("clear-btn");
+
+clearButton.addEventListener('click', e => {
+    document.querySelector('.results-default').style.display = "flex";
+    document.querySelector('.results-active').style.display = "none";
+})
