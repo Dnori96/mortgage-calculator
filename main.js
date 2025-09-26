@@ -55,7 +55,14 @@ function validFunc() {
         rateError.style.visibility = "hidden";
     };
 
-    if (repayType.checked !== true && interestType.checked !== true) {
+    if (repayType.checked !== true && interestType.checked !== true) { // For repayments
+        typeError.style.visibility = "visible";
+        isValid = false;
+    } else {
+        typeError.style.visibility = "hidden";
+    };
+
+    if (repayType.checked !== true && interestType.checked === true) { // For interest only
         typeError.style.visibility = "visible";
         isValid = false;
     } else {
@@ -79,6 +86,7 @@ function calc() {
 };
 
 bigNum = document.querySelector('.big-num');
+smallNumTitle = document.querySelector('.small-num-label')
 smallNum = document.querySelector('.small-num');
 
 function repayCalc(principal, rate, term) {
@@ -103,10 +111,18 @@ function interCalc(principal, rate) {
         smallNum.textContent = "N/A"
 };
 
-// const termBox = document.querySelector(".term-box");
-// const termDiv = document.querySelector("#term");
+const termBox = document.querySelector(".term-box");
+const termDiv = document.querySelector("#input-term");
+const rateBox = document.querySelector(".rate-box");
+const rateDiv = document.querySelector("#input-rate");
 
-// interestType.addEventListener('change', e => {
-//     termDiv.style.width = "100%";
-//     termBox.style.display = "none";
-// })
+interestType.addEventListener('change', e => {
+    termBox.style.display = "none";
+    rateDiv.style.width = "400px";
+    rateDiv.style.transition = "width 0.2s ease";
+});
+
+repayType.addEventListener('change', e => {
+    termBox.style.display = "";
+    rateDiv.style.width = "137px";
+});

@@ -136,17 +136,12 @@ body{
     font-weight: var(--font-700);
     cursor: default;
 }
-#input-amount-box{
-    border: 0;
-    width: 100%;
-}
 .term-rate-box, 
 .term-rate-div, 
 .mortgage-type{
     display: flex;
 }
 .term-rate-box{
-    border: 3px solid greenyellow;
     gap: 24px;
     justify-content: space-between;
 }
@@ -154,19 +149,26 @@ body{
     width: 100%;
     border: 1.5px solid var(--Slate-300);
     border-radius: 4px;
+    cursor: default;
 }
 /* FOR CHECKED BOXES */
-.term-box{
+/* .term-box{
     display: none;
+} */
+#input-rate{
+    width: 137px; /* Normal = 137px, Active = 400 */
 }
 /*  */
+#input-amount-box{
+    border: 0;
+    width: 100%;
+}
 #input-term{
     border: 0;
     width: 120px;
 }
 #input-rate{
     border: 0;
-    width: 157px;
 }
 #input-amount-box, 
 #input-term, 
