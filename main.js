@@ -39,32 +39,32 @@ function validFunc() {
         isValid = false;
     } else {
         amountError.style.visibility = "hidden";
-    }
+    };
 
     if (termInput.value === '') {
         termError.style.visibility = "visible"
         isValid = false;
     } else {
         termError.style.visibility = "hidden";
-    }
+    };
 
     if (rateInput.value === '') {
-        rateError.style.visibility = "visible"
+        rateError.style.visibility = "visible";
         isValid = false;
     } else {
-        rateError.style.visibility = "hidden"
-    }
+        rateError.style.visibility = "hidden";
+    };
 
     if (repayType.checked !== true && interestType.checked !== true) {
-        typeError.style.visibility = "visible"
+        typeError.style.visibility = "visible";
         isValid = false;
     } else {
-        typeError.style.visibility = "hidden"
-    }
+        typeError.style.visibility = "hidden";
+    };
 
     if (isValid === true) {
         return isValid && calc();
-    }
+    };
 };
 
 function calc() {
@@ -73,31 +73,32 @@ function calc() {
     
     if (repayType.checked === true) {
         return repayCalc(amountInput.value, rateInput.value, termInput.value);
-    } 
-    else if (interestType.checked === true){
-        return interCalc();
-    } 
-    else {
-        return false;
-    }
+    } else if (interestType.checked === true){
+        return interCalc(amountInput.value, rateInput.value);
+    };
 };
 
-bigNum = document.querySelector('.big-num')
+bigNum = document.querySelector('.big-num');
+smallNum = document.querySelector('.small-num');
 
 function repayCalc(principal, rate, term) {
     p = principal;
-    r = rate / 12;
+    r = (rate / 100) / 12;
     n = term * 12;
-    console.log(p, r, n);
 
-    repayments = formatter.format(p * ((r * ((1 + r) ** n)) / (((1 + r) ** n) - 1)));
-    console.log(repayments);
-
-    bigNum.textContent = repayments;
-    console.log(bigNum);
+    repayments = p * ((r * ((1 + r) ** n)) / (((1 + r) ** n) - 1));
+        bigNum.textContent = formatter.format(repayments);
+    totalAmount = repayments * n;
+        smallNum.textContent = formatter.format(totalAmount);
     
-    return repayments
-}
+    return repayments && totalAmount
+};
 function interCalc(principal, rate) {
+    p = principal;
+    r = (rate / 100) / 12;
 
-}
+    interestOnly = p * r
+        bigNum.textContent = formatter.format(interestOnly);
+        
+        smallNum.textContent = "N/A"
+};
