@@ -146,6 +146,7 @@ body{
     display: flex;
 }
 .term-rate-box{
+    border: 3px solid greenyellow;
     gap: 24px;
     justify-content: space-between;
 }
@@ -154,6 +155,11 @@ body{
     border: 1.5px solid var(--Slate-300);
     border-radius: 4px;
 }
+/* FOR CHECKED BOXES */
+.term-box{
+    display: none;
+}
+/*  */
 #input-term{
     border: 0;
     width: 120px;

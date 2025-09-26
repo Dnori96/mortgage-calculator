@@ -102,3 +102,11 @@ function interCalc(principal, rate) {
         
         smallNum.textContent = "N/A"
 };
+
+// const termBox = document.querySelector(".term-box");
+// const termDiv = document.querySelector("#term");
+
+// interestType.addEventListener('change', e => {
+//     termDiv.style.width = "100%";
+//     termBox.style.display = "none";
+// })
