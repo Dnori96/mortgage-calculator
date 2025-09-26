@@ -9,7 +9,14 @@ const inputParameters = document.querySelectorAll('.input');
 
 inputParameters.forEach(function(input) {
     input.addEventListener("input", function () {
-        this.value = this.value.replace(/[^0-9]/g, "");
+        
+        let val = this.value.replace(/[^0-9.]/g, "");
+
+        const parts = val.split('.');
+        if (parts.length > 2) {
+            val = parts[0] + '.' + parts.slice(1).join('');
+        }
+        this.value = val;
     });
 });
 
