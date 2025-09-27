@@ -103,7 +103,7 @@ function repayCalc(principal, rate, term) {
     totalAmount = repayments * n;
         smallNum.textContent = formatter.format(totalAmount);
     
-    document.querySelector('.result-num').style.height = "292px";
+    document.querySelector('.result-num').style.height = "auto";
     smallNumTitle.textContent = "Total you'll repay over the term";
     smallNum.style.display = "flex";
     

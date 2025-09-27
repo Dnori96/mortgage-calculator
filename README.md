@@ -27,8 +27,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL:
-- Live Site URL:
+- Solution URL: 
+- Live Site URL: [GitHub Page](https://dnori96.github.io/mortgage-calculator/)
 ## My process
 
 ### Built with
