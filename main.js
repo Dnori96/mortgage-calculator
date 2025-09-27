@@ -130,15 +130,27 @@ const rateDiv = document.querySelector("#input-rate");
 
 interestType.addEventListener('change', e => {
     termBox.style.opacity = "0";
-    rateDiv.style.width = "375px";
-    rateDiv.style.transition = "width 0.2s ease";
-    termInput.style.textContent = "";
+    
+    if (window.innerWidth > 515) {
+        rateDiv.style.width = "375px";
+        rateDiv.style.transition = "width 0.2s ease";
+        termInput.style.textContent = "";
+    } else if (window.innerWidth <= 515) {
+        rateDiv.style.width = "250px";
+        rateDiv.style.transition = "width 0.2s ease";
+        termInput.style.textContent = "";
+    }
 });
 
 repayType.addEventListener('change', e => {
     termBox.style.opacity = "1";
     termBox.style.transition = "opacity 0.2s ease-out"
-    rateDiv.style.width = "137px";
+
+    if (window.innerWidth > 515) {
+        rateDiv.style.width = "137px";
+    } else if (window.innerWidth <= 515) {
+        rateDiv.style.width = "90px";
+    }
 });
 
 clearButton = document.getElementById("clear-btn");

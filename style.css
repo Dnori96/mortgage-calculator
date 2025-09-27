@@ -414,7 +414,6 @@ button img{
         margin-bottom: 6px;
     }
     .mortgage-type{
-        justify-content: end;
         padding: 0;
         margin: 0;
     }
@@ -476,5 +475,106 @@ button img{
         display: none;   MAYBE
     } */
 }
-@media (max-width: 560px) {
+@media (max-width: 515px) {
+
+    body{
+        background: var(--White);
+    }
+    .container{
+        height: 100%;
+        width: 100%;
+        border-radius: 0;
+        flex-direction: column;
+    }
+    .calculator-section{
+        padding: 20px 40px;
+        width: 375px;
+    }
+    .top-calc-sec{
+        align-items: center;
+        height: 35px;
+        margin-bottom: 10px;
+    }
+    .top-calc-sec .mortgage-title{
+    font-size: 20px;
+    color: var(--Slate-900);
+    }
+    #clear-btn{
+        font-size: 14px;
+    }
+    #input-rate{
+        width: 90px; /* Default = 90 Interest Only = width: 250px;*/
+    }
+    #years-icon{
+        width: 66px;
+    }
+    #input-term{
+        width: 70px; 
+    }
+    .input-label{
+        font-size: 14px;
+        margin-bottom: 6px;
+    }
+    .mortgage-type{
+        padding: 0;
+        margin: 0;
+    }
+    .interest-only-box{
+        margin-bottom: 3px;
+    }
+    .error-msg{
+        visibility: visible;
+        font-size: 12px;
+        margin: 0;
+        margin-bottom: 3px;
+    }
+    #calculate-btn{
+        width: 100%;
+        margin: 0;
+    }
+
+    .results-section{
+        padding: 24px 24px;
+        height: 500px;
+        border-radius: 24px 24px 0 0;
+        width: 100%;
+    }
+    .results-section img{
+    height: 172px;
+    width: 172px;
+    }
+    .result-title-empty{
+        margin-bottom: 10px;
+    }
+    .result-text-empty{
+        font-size: var(--font-def-size);
+        line-height: 1.1em;
+        margin-bottom: 0;
+    }
+    .results-active *{
+        margin: 0;
+    }
+    .results-active{
+        gap: 5px;
+    }
+    .result-num{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px 24px;
+    }
+    .big-num-label{
+        margin-top: 0;
+        margin-bottom: 15px;
+    }
+    .divider{
+        margin: 10px 0;
+    }
+    .small-num-label{
+        margin-bottom: 3px;
+    }
+
+    .attribution{
+        display: none;
+    }
 }
