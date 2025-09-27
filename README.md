@@ -27,9 +27,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
-
+- Solution URL:
+- Live Site URL:
 ## My process
 
 ### Built with
@@ -46,4 +45,4 @@ The is more features that I want to implement in this project, but I going to do
 ## Author
 
 - GitHub - [Diego Noriega](https://github.com/Dnori96.).
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/DiegoNor548).
+- Frontend Mentor - [Diego Noriega](https://www.frontendmentor.io/profile/DiegoNor548).
