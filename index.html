@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./src/assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="./src/style.css">
   <title>Mortgage repayment calculator</title>
 </head>
 <body>
@@ -38,12 +38,12 @@
           <label class="interest-only-box"><input type="radio" class="type-btn" id="interest-only-btn" name="type">Interest Only</label>
           <p class="error-msg" id="type-err-msg">This field is required</p>
         </div>
-        <button type="submit" id="calculate-btn"><img src="assets/images/icon-calculator.svg">Calculate Repayments</button>
+        <button type="submit" id="calculate-btn"><img src="/src/assets/images/icon-calculator.svg">Calculate Repayments</button>
       </form>
     </section>
     <section class="results-section">
       <div class="results-default">
-        <img src="assets/images/illustration-empty.svg">
+        <img src="/src/assets/images/illustration-empty.svg">
         <h3 class="result-title-empty">Results shown here</h3>
         <p class="result-text-empty">Complete the form and click "calculate repayments" to see what your monthly repayments would be.</p>
       </div>
@@ -70,6 +70,6 @@
       Coded by <a href="https://github.com/Dnori96" target="_blank">Diego Noriega</a>.
     </div>
   </footer>
-  <script src="main.js"></script>
+  <script type="module" src="./src/main.js"></script>
 </body>
 </html>
